@@ -1,0 +1,66 @@
+{
+  "name": "Nexus Project Dev Container",
+    
+  "build": {
+    "context": "..",
+    "dockerfile": "Dockerfile"
+  },
+  
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
+  // Non-root user
+  "remoteUser": "appuser",
+
+  // Reuse CMD from Dockerfile
+  "overrideCommand": false,
+
+  // VS Code customizations
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "charliermarsh.ruff",
+        "ms-azuretools.vscode-docker",
+        "eamodio.gitlens"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.formatting.provider": "black",
+        "python.linting.enabled": true,
+        "python.testing.pytestEnabled": true,
+        "python.testing.pytestArgs": ["nexus-api/tests"],
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "editor.formatOnSave": true
+      }
+    }
+  },
+
+  // Optional: Features to install useful tools in container
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+
+  // Optional: Add environment variables
+  "containerEnv": {
+    "PATH": "/home/appuser/.local/bin:${containerEnv:PATH}",
+    "PYTHONUNBUFFERED": "1"
+  },
+
+  // Automatically install requirements
+  "postCreateCommand": "pip install -r nexus-api/requirements.txt",
+
+  // Optional: Actions after container starts (e.g. DB migrations)
+  "postStartCommand": "",
+
+  // Optional: Auto-update shared files like .env or scripts (can be git pull or rsync)
+  "updateContentCommand": "",
+
+  // Set default shell (useful for some extensions)
+  "remoteEnv": {
+    "SHELL": "/bin/bash"
+  }
+}

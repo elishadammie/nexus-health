@@ -1,0 +1,28 @@
+# FastAPI and Server
+fastapi
+uvicorn[standard]
+
+# Database
+sqlalchemy
+psycopg2-binary
+alembic
+pgvector
+
+# Pydantic for settings
+pydantic
+pydantic-settings
+
+# LangChain/LangGraph
+langchain
+langgraph
+langchain-openai
+
+
+# embeddings
+pypdf
+python-docx
+langchain-community
+
+
+# other 
+httpx
