@@ -6,24 +6,24 @@ Nexus is an intelligent, AI-powered virtual assistant designed for healthcare pr
 
 The Nexus agent has a variety of skills built on a safety-first principle:
 
-* [cite_start]**Symptom Triage & First Aid:** Provides pre-approved first-aid instructions for minor injuries from a controlled knowledge base and directs users to seek immediate help for severe symptoms[cite: 75].
-* [cite_start]**FAQ & Information Retrieval (RAG):** Answers questions about the clinic (e.g., hours, services, insurance) using a Retrieval-Augmented Generation pipeline to ensure factual, accurate responses[cite: 85].
-* [cite_start]**Appointment Booking:** Guides users through the process of booking an appointment[cite: 94].
+**Symptom Triage & First Aid:** Provides pre-approved first-aid instructions for minor injuries from a controlled knowledge base and directs users to seek immediate help for severe symptoms
+**FAQ & Information Retrieval (RAG):** Answers questions about the clinic (e.g., hours, services, insurance) using a Retrieval-Augmented Generation pipeline to ensure factual, accurate responses
+**Appointment Booking:** Guides users through the process of booking an appointment
 * **Conversational Memory:** Remembers the context of the conversation to handle follow-up questions and topic changes seamlessly.
 
 ## Tech Stack
 
 The project is built with a modern, scalable tech stack:
 
-* [cite_start]**Backend:** FastAPI (Python) [cite: 18]
-* [cite_start]**Conversational AI Core:** LangGraph [cite: 27]
-* [cite_start]**Database:** PostgreSQL with pgvector for vector search [cite: 33]
-* [cite_start]**LLM Provider:** OpenAI [cite: 8, 43]
-* [cite_start]**Environment:** Docker & VS Code Dev Containers [cite: 138, 241]
+**Backend:** FastAPI (Python)
+**Conversational AI Core:** LangGraph
+**Database:** PostgreSQL with pgvector for vector search
+**LLM Provider:** OpenAI
+**Environment:** Docker & VS Code Dev Containers
 
 ## Setup & Installation
 
-[cite_start]The project uses VS Code Dev Containers to provide a one-click, consistent development environment[cite: 138, 241].
+The project uses VS Code Dev Containers to provide a one-click, consistent development environment
 
 1.  **Prerequisites:** Install Docker Desktop, WSL 2 (with Ubuntu), and VS Code with the Dev Containers extension.
 2.  **Clone the Repository:** Clone the project into your WSL 2 filesystem (not your Windows C: drive).
